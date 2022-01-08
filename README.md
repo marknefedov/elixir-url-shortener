@@ -1,6 +1,6 @@
 # UrlShortener
 
-**TODO: Add description**
+Simple app that shorents URLs.
 
 ## Installation
 
