@@ -68,7 +68,11 @@ defmodule UrlShortener.Router do
          }) do
       {:ok, _} ->
         Logger.info("Created url from " <> end_url <> " to " <> rand_string)
-        {200, Jason.encode!(%{"redirect_url" => "site.com/" <> rand_string})}
+
+        {200,
+         Jason.encode!(%{
+           "redirect_url" => Application.fetch_env!(:url_shortener, :base_url) <> rand_string
+         })}
 
       {:error, error} ->
         Logger.error("Error occured: " <> error.message)

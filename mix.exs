@@ -24,7 +24,8 @@ defmodule UrlShortener.MixProject do
     [
       {:plug_cowboy, "~> 2.0"},
       {:jason, "~> 1.3"},
-      {:mongodb_driver, "~> 0.8"}
+      {:mongodb_driver, "~> 0.8"},
+      {:vapor, "~> 0.10"}
     ]
   end
 end
